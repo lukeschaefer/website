@@ -53,12 +53,16 @@ const { ingredients, title, description, pubDate, updatedDate, heroImage } =
         font-style: italic;
       }
       .ingredients{
+        background: white;
         border: 1px solid rgb(var(--gray-light));
         text-align: left;
-        padding: .4em 1em;
+        padding: .6em 1em;
         margin: 1em 0em 2em 0em;
         display: block;
         column-count: 2;
+      }
+      ol {
+        padding-left: 1em;
       }
       @media (max-width: 500px) { /* Adjust 300px to the breakpoint you need */
         .ingredients {
@@ -79,27 +83,13 @@ const { ingredients, title, description, pubDate, updatedDate, heroImage } =
     <Header />
     <main>
       <article>
-        <div class="hero-image">
-          {
-            heroImage && (
-              <img width={1020} height={510} src={heroImage} alt="" />
-            )
-          }
-        </div>
         <div class="prose">
           <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
             <h1>{title}</h1>
-            <h4>Ingredients</h4>
+            <div class="date">
+              {description}
+            </div><br>
+            <h4>You'll need</h4>
             <div class="ingredients">
               {
                 ingredients &&
