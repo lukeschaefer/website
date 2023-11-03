@@ -5,13 +5,11 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<a href="/"><img class="logo" src="/profile.jpeg"/></a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
 			<HeaderLink href="/recipes">Recipes</HeaderLink>
-
 		</div>
 		<div class="social-links">
 			<a href="https://github.com/lukeschaefer" target="_blank">
@@ -33,6 +31,12 @@ import { SITE_TITLE } from '../consts';
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
+	.logo {
+		width: 42px;
+		height: 42px;
+		border-radius: 100%;
+		border: 2px solid var(--accent);
+	}
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -48,7 +52,8 @@ import { SITE_TITLE } from '../consts';
 		justify-content: space-between;
 	}
 	nav a {
-		padding: 1em 0.5em;
+		padding: .5em 0.5em;
+		line-height: 8px;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
